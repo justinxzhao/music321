@@ -42,22 +42,15 @@ def parseChords(filePath, chordGraph):
 paths = corpus.getComposer('bach')
 chordGraph = ChordGraph()
 
-#for p in paths:
-#	print p
-#	b = converter.parse(p)
+for p in paths:
+	parseChords(p, chordGraph)
 
-parseChords(paths[0], chordGraph)
+#for c in chordGraph.chordSet.values():
+#	print "The chord: " + c.chordStr
+#	c.printLinks()
+#	print ""
 
-#print "The chord i:"
-#print chordGraph.chordSet['i']
-#print "The destination chords for i:"
-#chordGraph.chordSet['i'].printLinks()
-
-for c in chordGraph.chordSet.values():
-	print "The chord: " + c.chordStr
-	c.printLinks()
-	print ""
-
+#serialize the chordGraph
 output = open('data/data.pkl', 'wb')
 pickle.dump(chordGraph, output)
 output.close()
