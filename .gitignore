@@ -15,6 +15,7 @@
 *.xml
 *.mus
 *.pkl
+*.txt
 
 # Packages #
 ############

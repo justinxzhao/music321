@@ -15,7 +15,7 @@ class ChordVertex:
 	def addLink(self, chordTo):
 		if not chordTo.chordStr in self.chordLinks.keys():
 			#create a new link for this vertex
-			cl = ChordLink(chordTo)
+			cl = ChordLink(chordTo.chordStr)
 			self.chordLinks[chordTo.chordStr] = cl
 		else:
 			#find the link that exists and addweight
