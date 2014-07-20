@@ -1,4 +1,3 @@
 music321
 ========
-
-Tools for generating and analyzing music statistically
+Generating and analyzing music probabilistically using the python music21 library
